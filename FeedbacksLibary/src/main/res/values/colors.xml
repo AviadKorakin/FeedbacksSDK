@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Design Colors -->
+    <!-- Light Mode Colors -->
+    <color name="design_light_background_color">#FFFFFF</color>
+    <color name="design_light_text_color">#000000</color>
+    <color name="design_light_button_background_color">#6200EE</color>
+    <color name="design_light_button_text_color">#FFFFFF</color>
+
+    <!-- Dark Mode Colors -->
+    <color name="design_dark_background_color">#121212</color>
+    <color name="design_dark_text_color">#FFFFFF</color>
+    <color name="design_dark_button_background_color">#03DAC6</color>
+    <color name="design_dark_button_text_color">#000000</color>
+
+
+    <!-- Combo box Colors -->
+    <!-- Light Mode Colors -->
+    <color name="combobox_light_item_text_color">#000000</color>
+    <color name="combobox_light_selected_item_text_color">#FFFFFF</color>
+    <color name="combobox_light_dropdown_background_color">#FFFFFF</color>
+    <color name="combobox_light_selected_item_background_color">#6200EE</color>
+    <color name="combobox_light_background_color">#F5F5F5</color>
+
+    <!-- Dark Mode Colors -->
+    <color name="combobox_dark_item_text_color">#FFFFFF</color>
+    <color name="combobox_dark_selected_item_text_color">#000000</color>
+    <color name="combobox_dark_dropdown_background_color">#121212</color>
+    <color name="combobox_dark_selected_item_background_color">#03DAC6</color>
+    <color name="combobox_dark_background_color">#000000</color>
+
+    <!-- Star Colors -->
+    <!-- Light Mode Colors -->
+    <color name="star_light_star_fill_color">#FFD700</color>
+    <color name="star_light_secondary_star_fill_color">#FFC107</color>
+    <!-- Dark Mode Colors -->
+    <color name="star_dark_star_fill_color">#FFD700</color>
+    <color name="star_dark_secondary_star_fill_color">#FFC107</color>
+
+    <!-- Title Colors -->
+    <!-- Light Mode Colors -->
+    <color name="title_light_text_color">#000000</color> <!-- Black -->
+    <color name="title_light_background_color">#FFFFFF</color> <!-- White -->
+    <color name="title_light_border_color">#FFFFFF</color> <!-- Light gray -->
+
+    <!-- Dark Mode Colors -->
+    <color name="title_dark_text_color">#FFFFFF</color> <!-- White -->
+    <color name="title_dark_background_color">#000000</color> <!-- Black -->
+    <color name="title_dark_border_color">#000000</color> <!-- Dark gray -->
+
+
+    <!-- ScaleBar Colors -->
+    <!-- Light Mode Colors -->
+    <color name="scalebar_light_thumb_and_trail_color">#6200EE</color>
+    <color name="scalebar_light_text_color">#000000</color>
+    <!-- Dark Mode Colors -->
+    <color name="scalebar_dark_thumb_and_trail_color">#03DAC6</color>
+    <color name="scalebar_dark_text_color">#FFFFFF</color>
+
+    <!-- Textbox Colors -->
+    <!-- Light Mode Colors -->
+    <color name="textbox_light_background_color">#FFFFFF</color>
+    <color name="textbox_light_text_color">#000000</color>
+    <color name="textbox_light_hint_color">#757575</color>
+    <color name="textbox_light_focused_hint_color">#6200EE</color>
+    <color name="textbox_light_box_stroke_color">#000000</color>
+    <color name="textbox_light_focused_box_stroke_color">#6200EE</color>
+    <color name="textbox_light_error_text_color">#FF0000</color>
+    <color name="textbox_light_counter_text_color">#0000FF</color>
+    <color name="textbox_light_cursor_color">#6200EE</color>
+    <color name="textbox_light_placeholder_color">#757575</color>
+    <color name="textbox_light_helper_text_color">#757575</color>
+
+    <!-- Dark Mode Colors -->
+    <color name="textbox_dark_background_color">#121212</color>
+    <color name="textbox_dark_text_color">#FFFFFF</color>
+    <color name="textbox_dark_hint_color">#B0B0B0</color>
+    <color name="textbox_dark_focused_hint_color">#03DAC6</color>
+    <color name="textbox_dark_box_stroke_color">#FFFFFF</color>
+    <color name="textbox_dark_focused_box_stroke_color">#03DAC6</color>
+    <color name="textbox_dark_error_text_color">#CF6679</color>
+    <color name="textbox_dark_counter_text_color">#03DAC6</color>
+    <color name="textbox_dark_cursor_color">#03DAC6</color>
+    <color name="textbox_dark_placeholder_color">#B0B0B0</color>
+    <color name="textbox_dark_helper_text_color">#B0B0B0</color>
+</resources>
