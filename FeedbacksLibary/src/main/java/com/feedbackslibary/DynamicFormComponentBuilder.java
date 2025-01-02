@@ -88,7 +88,7 @@ public class DynamicFormComponentBuilder {
 
         TextInputLayout textInputLayout = new TextInputLayout(context);
         textInputLayout.setId(View.generateViewId());
-        textInputLayout.setHint(" "+component.getSecondaryText());
+        textInputLayout.setHint(component.getSecondaryText());
         textInputLayout.setTypeface(regularCustomFont); // Apply the custom font
 
         // Apply color states
@@ -118,9 +118,8 @@ public class DynamicFormComponentBuilder {
         container.addView(textInputLayout);
 
         applyConstraints(container, label, textInputLayout);
-        
 
-
+        editText.setPadding(editText.getPaddingLeft()+20,editText.getPaddingTop(),editText.getPaddingRight(),editText.getPaddingBottom());
         // Add to inputViews map with type "textbox"
         inputViews.put(component.getText(),new MapDetails(textInputLayout,"textbox", component.getOrder()));
 
@@ -306,6 +305,9 @@ public class DynamicFormComponentBuilder {
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 // This method defines the view for the selected item in the spinner
                 TextView textView = (TextView) super.getView(position, convertView, parent);
+                textView.setTypeface(regularCustomFont); // Apply the custom font
+                textView.setBackgroundColor(spinnerColors.dropdownBackgroundColor); // Default background color
+                textView.setTextColor(spinnerColors.itemTextColor); // Default text color
                 textView.setTypeface(regularCustomFont); // Apply the custom font
                 return textView;
             }

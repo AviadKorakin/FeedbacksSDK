@@ -1,6 +1,6 @@
 package com.feedbackslibary;
 
-
+import com.google.gson.annotations.SerializedName;
 import java.util.Date;
 import java.util.List;
 
@@ -11,6 +11,9 @@ public class Form {
     private List<Component> components; // List of components
     private Date created_at; // Timestamp for creation
     private Date updated_at; // Timestamp for updates
+
+    @SerializedName("userId") // Matches the MongoDB schema field
+    private String userId; // The ID of the user associated with the form
 
     // Getters and Setters
     public String getName() {
@@ -59,5 +62,13 @@ public class Form {
 
     public void setUpdatedAt(Date updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

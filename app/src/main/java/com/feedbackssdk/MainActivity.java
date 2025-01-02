@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 
-import com.feedbackslibary.CustomDialogFragment;
+import com.feedbackslibary.FeedbacksDialogFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Button openDialogButton = findViewById(R.id.openDialogButton);
         openDialogButton.setOnClickListener(v -> {
             // Replace "your_form_id" with the actual ID to fetch
-            CustomDialogFragment dialogFragment = CustomDialogFragment.newInstance("675d9bf352178e707f81c24d");
+            FeedbacksDialogFragment dialogFragment = FeedbacksDialogFragment.newInstance("6762c6c4a1b1d4a374052e1a");
 
-            dialogFragment.show(getSupportFragmentManager(), "CustomDialogFragment");
+            dialogFragment.show(getSupportFragmentManager(), "FeedbacksDialogFragment");
         });
     }
 }

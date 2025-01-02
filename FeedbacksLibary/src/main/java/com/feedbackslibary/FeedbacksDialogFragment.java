@@ -6,7 +6,6 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -16,16 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
-import android.widget.ProgressBar;
 import android.widget.RatingBar;
-import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,8 +31,6 @@ import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.DialogFragment;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.CustomViewTarget;
-import com.bumptech.glide.request.transition.Transition;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -55,7 +47,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class CustomDialogFragment extends DialogFragment {
+public class FeedbacksDialogFragment extends DialogFragment {
 
     private static final String ARG_FORM_ID = "formId";
     private String formId;
@@ -71,16 +63,16 @@ public class CustomDialogFragment extends DialogFragment {
     private float dialogWidthPercent = 1f; // Default width as 80% of the screen
     private int margin = 32; // Default margin between components
 
-    public static CustomDialogFragment newInstance(String formId) {
-        CustomDialogFragment fragment = new CustomDialogFragment();
+    public static FeedbacksDialogFragment newInstance(String formId) {
+        FeedbacksDialogFragment fragment = new FeedbacksDialogFragment();
         Bundle args = new Bundle();
         args.putString(ARG_FORM_ID, formId);
         fragment.setArguments(args);
 
         return fragment;
     }
-    public static CustomDialogFragment newInstance(String formId,Typeface regularFont, Typeface boldFont,float dialogWidthPercent, int margin) {
-        CustomDialogFragment fragment = new CustomDialogFragment();
+    public static FeedbacksDialogFragment newInstance(String formId, Typeface regularFont, Typeface boldFont, float dialogWidthPercent, int margin) {
+        FeedbacksDialogFragment fragment = new FeedbacksDialogFragment();
         Bundle args = new Bundle();
         args.putString(ARG_FORM_ID, formId);
         fragment.setArguments(args);
@@ -91,8 +83,8 @@ public class CustomDialogFragment extends DialogFragment {
 
         return fragment;
     }
-    public static CustomDialogFragment newInstance(String formId,Typeface regularFont, Typeface boldFont) {
-        CustomDialogFragment fragment = new CustomDialogFragment();
+    public static FeedbacksDialogFragment newInstance(String formId, Typeface regularFont, Typeface boldFont) {
+        FeedbacksDialogFragment fragment = new FeedbacksDialogFragment();
         Bundle args = new Bundle();
         args.putString(ARG_FORM_ID, formId);
         fragment.setArguments(args);
@@ -204,6 +196,7 @@ public class CustomDialogFragment extends DialogFragment {
             @Override
             public void onFailure(@NonNull Call<Form> call, @NonNull Throwable t) {
                 showMessagePopup("Network error: " + t.getLocalizedMessage());
+                Log.d("SADSADSAQWE",t.getLocalizedMessage());
                 dismiss();
             }
         });
