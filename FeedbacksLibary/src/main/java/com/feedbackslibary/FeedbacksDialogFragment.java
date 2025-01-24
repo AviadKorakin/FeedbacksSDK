@@ -177,7 +177,7 @@ public class FeedbacksDialogFragment extends DialogFragment {
         // Step 1: Add a loading container with an icon
         addLoadingContainer(rootLayout);
 
-        FormApi api = RetrofitClient.getInstance("prod").create(FormApi.class);
+        FormApi api = RetrofitClient.getInstance(requireContext(),"prod").create(FormApi.class);
         api.getForm(formId).enqueue(new Callback<Form>() {
             @Override
             public void onResponse(@NonNull Call<Form> call, @NonNull Response<Form> response) {
@@ -589,7 +589,7 @@ public class FeedbacksDialogFragment extends DialogFragment {
             FeedbackRequest feedbackRequest = new FeedbackRequest(formId, email, responses);
 
             // Send the feedback via the API
-            FormApi api = RetrofitClient.getInstance("prod").create(FormApi.class);
+            FormApi api = RetrofitClient.getInstance(requireContext(),"prod").create(FormApi.class);
 
             showLoadingIndicator(rootLayout); // Show loading overlay
 
