@@ -1,4 +1,4 @@
-Here is the updated section with **How to Use** included, styled and formatted consistently with the README:
+To integrate the **"How to Use"** section with the dependency resolution and implementation details for your library (`FeedbacksSDK`), here’s how you can structure it:
 
 ---
 
@@ -18,7 +18,37 @@ Replace `"YOUR-API-KEY"` with the actual API key provided during setup.
 
 ---
 
-### 2️⃣ Create a Form
+### 2️⃣ Add the SDK Dependency
+
+Ensure that your project is configured to fetch the library from JitPack. Update your **`settings.gradle`** and **`build.gradle`** as follows:
+
+#### **`settings.gradle`**
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+        }
+    }
+}
+```
+
+#### **`build.gradle` (App Module)**
+Add the library dependency to your app module's dependencies block:
+```kotlin
+dependencies {
+    implementation("com.github.AviadKorakin:FeedbacksSDK:v1.0.4")
+}
+```
+
+Sync your Gradle project after adding these changes.
+
+---
+
+### 3️⃣ Create a Form
 
 Use the Form Builder to design and generate a form. Include modular components such as textboxes, dropdowns, and rating bars.
 
@@ -44,7 +74,7 @@ Now your users can directly use the website link to design their forms!
 
 ---
 
-### 3️⃣ Use the Form ID in the SDK
+### 4️⃣ Use the Form ID in the SDK
 
 Integrate the form into your Android application using the SDK. Fetch and display the form dynamically.
 
@@ -62,4 +92,4 @@ Replace `"your_form_id"` in the code above with the form ID generated from the F
 
 ---
 
-This section is now consistent with the rest of the README's structure, style, and icons. Let me know if further adjustments are needed!
+This structured approach ensures developers can quickly set up and integrate your library into their projects. Let me know if you’d like further refinements! 😊
