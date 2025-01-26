@@ -1,4 +1,4 @@
-package com.feedbackslibary;
+package com.feedbackslibary.models;
 
 public class ResponseDetail {
     private String answer;

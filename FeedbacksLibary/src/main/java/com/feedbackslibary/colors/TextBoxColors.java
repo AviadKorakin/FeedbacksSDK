@@ -1,9 +1,11 @@
-package com.feedbackslibary;
+package com.feedbackslibary.colors;
 
 import static androidx.core.content.ContextCompat.getColor;
 
 import android.content.Context;
 import android.graphics.Color;
+
+import com.feedbackslibary.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -77,7 +79,7 @@ public class TextBoxColors {
 
     // Method to apply light theme
     private void applyLightTheme(Context context) {
-        this.backgroundColor = getCachedColor(context,R.color.textbox_light_background_color);
+        this.backgroundColor = getCachedColor(context, R.color.textbox_light_background_color);
         this.textColor = getCachedColor(context,R.color.textbox_light_text_color);
         this.hintColor = getCachedColor(context,R.color.textbox_light_hint_color);
         this.focusedHintColor = getCachedColor(context,R.color.textbox_light_focused_hint_color);

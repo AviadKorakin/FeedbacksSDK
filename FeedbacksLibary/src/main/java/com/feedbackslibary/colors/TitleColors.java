@@ -1,46 +1,39 @@
-package com.feedbackslibary;
+package com.feedbackslibary.colors;
 
 import static androidx.core.content.ContextCompat.getColor;
-import static okhttp3.internal.Internal.instance;
 
-import android.app.Application;
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Color;
+
+import com.feedbackslibary.R;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class DesignColors {
-    // Fields for common colors
-    public int backgroundColor;
-    public int textColor;
-    public int buttonBackgroundColor;
-    public int buttonTextColor;
-
+// Title Colors
+public class TitleColors {
+    // Fields for title colors
+    public int textColor; // Title text color
+    public int backgroundColor; // Title background color
+    public int borderColor; // Title border color
     private static final Map<Integer, Integer> colorCache = new HashMap<>();
 
-
     // Constructor for light/dark themes using String
-    public DesignColors(String theme,Context context) {
-        if ("light".equalsIgnoreCase(theme)) { // Light theme
+    public TitleColors(String theme, Context context) {
+        if ("light".equalsIgnoreCase(theme)) {
             applyLightTheme(context);
-        } else if ("dark".equalsIgnoreCase(theme)) { // Dark theme
+        } else if ("dark".equalsIgnoreCase(theme)) {
             applyDarkTheme(context);
         } else {
             throw new IllegalArgumentException("Invalid theme. Use 'light' or 'dark'.");
         }
     }
 
-
-
-
     // Constructor for custom colors using hex strings
-    public DesignColors(String backgroundColor, String textColor, String buttonBackgroundColor, String buttonTextColor) {
-        this.backgroundColor = parseColor(backgroundColor);
+    public TitleColors(String textColor, String backgroundColor, String borderColor) {
         this.textColor = parseColor(textColor);
-        this.buttonBackgroundColor = parseColor(buttonBackgroundColor);
-        this.buttonTextColor = parseColor(buttonTextColor);
+        this.backgroundColor = parseColor(backgroundColor);
+        this.borderColor = parseColor(borderColor);
     }
 
     // Method to switch between light and dark themes
@@ -56,26 +49,23 @@ public class DesignColors {
 
     // Method to apply the light theme
     private void applyLightTheme(Context context) {
-        this.backgroundColor = getCachedColor(context, R.color.design_light_background_color);
-        this.textColor = getCachedColor(context, R.color.design_light_text_color);
-        this.buttonBackgroundColor = getCachedColor(context, R.color.design_light_button_background_color);
-        this.buttonTextColor = getCachedColor(context, R.color.design_light_button_text_color);
+        this.textColor = getCachedColor(context, R.color.title_light_text_color);
+        this.backgroundColor = getCachedColor(context,R.color.title_light_background_color);
+        this.borderColor = getCachedColor(context,R.color.title_light_border_color);
     }
 
     // Method to apply the dark theme
     private void applyDarkTheme(Context context) {
-        this.backgroundColor = getCachedColor(context, R.color.design_dark_background_color);
-        this.textColor = getCachedColor(context, R.color.design_dark_text_color);
-        this.buttonBackgroundColor = getCachedColor(context, R.color.design_dark_button_background_color);
-        this.buttonTextColor = getCachedColor(context, R.color.design_dark_button_text_color);
+        this.textColor = getCachedColor(context, R.color.title_dark_text_color);
+        this.backgroundColor = getCachedColor(context,R.color.title_dark_background_color);
+        this.borderColor = getCachedColor(context,R.color.title_dark_border_color);
     }
 
     // Method to apply custom colors using hex strings
-    public void setCustomColors(String backgroundColor, String textColor, String buttonBackgroundColor, String buttonTextColor) {
-        this.backgroundColor = parseColor(backgroundColor);
+    public void setCustomColors(String textColor, String backgroundColor, String borderColor) {
         this.textColor = parseColor(textColor);
-        this.buttonBackgroundColor = parseColor(buttonBackgroundColor);
-        this.buttonTextColor = parseColor(buttonTextColor);
+        this.backgroundColor = parseColor(backgroundColor);
+        this.borderColor = parseColor(borderColor);
     }
     // Helper method to get a cached color or resolve it
     private int getCachedColor(Context context, int colorResId) {
@@ -88,7 +78,6 @@ public class DesignColors {
         colorCache.put(colorResId, resolvedColor);
         return resolvedColor;
     }
-
     // Helper method to parse color strings
     private int parseColor(String color) {
         try {
@@ -98,3 +87,4 @@ public class DesignColors {
         }
     }
 }
+

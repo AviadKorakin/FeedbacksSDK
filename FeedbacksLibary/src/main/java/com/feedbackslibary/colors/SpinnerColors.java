@@ -1,9 +1,11 @@
-package com.feedbackslibary;
+package com.feedbackslibary.colors;
 
 import static androidx.core.content.ContextCompat.getColor;
 
 import android.content.Context;
 import android.graphics.Color;
+
+import com.feedbackslibary.R;
 
 public class SpinnerColors {
     // Fields for spinner colors

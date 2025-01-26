@@ -1,12 +1,11 @@
-package com.feedbackslibary;
+package com.feedbackslibary.colors;
 
 import static androidx.core.content.ContextCompat.getColor;
-import static okhttp3.internal.Internal.instance;
 
-import android.app.Application;
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Color;
+
+import com.feedbackslibary.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,7 +33,7 @@ public class ScaleBarColors {
     }
 
     private void applyLightTheme(Context context) {
-        this.thumbAndTrailColor = getCachedColor(context,R.color.scalebar_light_thumb_and_trail_color);
+        this.thumbAndTrailColor = getCachedColor(context, R.color.scalebar_light_thumb_and_trail_color);
         this.textColor = getCachedColor(context,R.color.scalebar_light_text_color);
     }
 

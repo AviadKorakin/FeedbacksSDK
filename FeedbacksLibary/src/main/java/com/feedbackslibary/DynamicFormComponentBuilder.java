@@ -22,6 +22,17 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
+import com.feedbackslibary.colors.DesignColors;
+import com.feedbackslibary.colors.ScaleBarColors;
+import com.feedbackslibary.colors.SpinnerColors;
+import com.feedbackslibary.colors.StarRatingColors;
+import com.feedbackslibary.colors.TextBoxColors;
+import com.feedbackslibary.colors.TitleColors;
+import com.feedbackslibary.components.ScaleBar;
+import com.feedbackslibary.models.Component;
+import com.feedbackslibary.models.Form;
+import com.feedbackslibary.models.MapDetails;
+import com.feedbackslibary.models.Option;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 

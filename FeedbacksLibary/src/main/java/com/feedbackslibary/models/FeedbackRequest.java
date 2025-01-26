@@ -1,4 +1,4 @@
-package com.feedbackslibary;
+package com.feedbackslibary.models;
 
 import java.util.Map;
 

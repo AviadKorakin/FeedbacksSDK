@@ -55,7 +55,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.AviadKorakin" // Change as needed
                 artifactId = "feedbackslibrary" // Change as needed
-                version = "1.0.3" // Change as needed
+                version = "v1.0.4" // Change as needed
                 artifact(tasks.getByName("bundleReleaseAar"))
 
                 pom {

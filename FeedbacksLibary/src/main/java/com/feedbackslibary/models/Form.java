@@ -1,4 +1,4 @@
-package com.feedbackslibary;
+package com.feedbackslibary.models;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.Date;

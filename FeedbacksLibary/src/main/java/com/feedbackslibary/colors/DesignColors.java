@@ -1,24 +1,27 @@
-package com.feedbackslibary;
+package com.feedbackslibary.colors;
 
 import static androidx.core.content.ContextCompat.getColor;
 
 import android.content.Context;
 import android.graphics.Color;
 
+import com.feedbackslibary.R;
+
 import java.util.HashMap;
 import java.util.Map;
 
-// StarRating Colors
-public class StarRatingColors {
-    // Fields for star rating colors
-    public int starFillColor; // Active stars
-    public int secondaryStarFillColor; // Partially filled stars
+public class DesignColors {
+    // Fields for common colors
+    public int backgroundColor;
+    public int textColor;
+    public int buttonBackgroundColor;
+    public int buttonTextColor;
 
     private static final Map<Integer, Integer> colorCache = new HashMap<>();
 
 
     // Constructor for light/dark themes using String
-    public StarRatingColors(String theme, Context context) {
+    public DesignColors(String theme,Context context) {
         if ("light".equalsIgnoreCase(theme)) { // Light theme
             applyLightTheme(context);
         } else if ("dark".equalsIgnoreCase(theme)) { // Dark theme
@@ -28,11 +31,15 @@ public class StarRatingColors {
         }
     }
 
-    // Constructor for custom colors using hex strings
-    public StarRatingColors(String starFillColor, String secondaryStarFillColor) {
-        this.starFillColor = parseColor(starFillColor);
-        this.secondaryStarFillColor = parseColor(secondaryStarFillColor);
 
+
+
+    // Constructor for custom colors using hex strings
+    public DesignColors(String backgroundColor, String textColor, String buttonBackgroundColor, String buttonTextColor) {
+        this.backgroundColor = parseColor(backgroundColor);
+        this.textColor = parseColor(textColor);
+        this.buttonBackgroundColor = parseColor(buttonBackgroundColor);
+        this.buttonTextColor = parseColor(buttonTextColor);
     }
 
     // Method to switch between light and dark themes
@@ -48,23 +55,28 @@ public class StarRatingColors {
 
     // Method to apply the light theme
     private void applyLightTheme(Context context) {
-        this.starFillColor = getCachedColor(context,R.color.star_light_star_fill_color);
-        this.secondaryStarFillColor = getCachedColor(context,R.color.star_light_secondary_star_fill_color);
+        this.backgroundColor = getCachedColor(context, R.color.design_light_background_color);
+        this.textColor = getCachedColor(context, R.color.design_light_text_color);
+        this.buttonBackgroundColor = getCachedColor(context, R.color.design_light_button_background_color);
+        this.buttonTextColor = getCachedColor(context, R.color.design_light_button_text_color);
     }
 
     // Method to apply the dark theme
     private void applyDarkTheme(Context context) {
-        this.starFillColor = getCachedColor(context,R.color.star_dark_star_fill_color);
-        this.secondaryStarFillColor = getCachedColor(context,R.color.star_dark_secondary_star_fill_color);
-
+        this.backgroundColor = getCachedColor(context, R.color.design_dark_background_color);
+        this.textColor = getCachedColor(context, R.color.design_dark_text_color);
+        this.buttonBackgroundColor = getCachedColor(context, R.color.design_dark_button_background_color);
+        this.buttonTextColor = getCachedColor(context, R.color.design_dark_button_text_color);
     }
 
     // Method to apply custom colors using hex strings
-    public void setCustomColors(String starFillColor, String secondaryStarFillColor) {
-        this.starFillColor = parseColor(starFillColor);
-        this.secondaryStarFillColor = parseColor(secondaryStarFillColor);
-
+    public void setCustomColors(String backgroundColor, String textColor, String buttonBackgroundColor, String buttonTextColor) {
+        this.backgroundColor = parseColor(backgroundColor);
+        this.textColor = parseColor(textColor);
+        this.buttonBackgroundColor = parseColor(buttonBackgroundColor);
+        this.buttonTextColor = parseColor(buttonTextColor);
     }
+    // Helper method to get a cached color or resolve it
     private int getCachedColor(Context context, int colorResId) {
         if (colorCache.containsKey(colorResId)) {
             return colorCache.get(colorResId); // Return cached color

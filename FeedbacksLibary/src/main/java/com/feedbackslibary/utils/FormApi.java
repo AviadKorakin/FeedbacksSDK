@@ -1,4 +1,7 @@
-package com.feedbackslibary;
+package com.feedbackslibary.utils;
+
+import com.feedbackslibary.models.FeedbackRequest;
+import com.feedbackslibary.models.Form;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

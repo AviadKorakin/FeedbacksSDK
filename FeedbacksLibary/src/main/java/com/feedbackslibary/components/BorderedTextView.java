@@ -1,4 +1,4 @@
-package com.feedbackslibary;
+package com.feedbackslibary.components;
 
 import android.content.Context;
 import android.graphics.Canvas;

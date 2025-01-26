@@ -1,4 +1,4 @@
-package com.feedbackslibary;
+package com.feedbackslibary.components;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,16 +8,11 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
-import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.util.Objects;
 
 @SuppressLint("ViewConstructor")
 public class ScaleBar extends LinearLayout {

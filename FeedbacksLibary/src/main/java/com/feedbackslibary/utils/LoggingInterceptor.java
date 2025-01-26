@@ -1,11 +1,10 @@
-package com.feedbackslibary;
+package com.feedbackslibary.utils;
 
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
 import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
