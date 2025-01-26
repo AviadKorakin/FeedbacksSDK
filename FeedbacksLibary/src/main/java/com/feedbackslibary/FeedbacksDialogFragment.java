@@ -188,7 +188,7 @@ public class FeedbacksDialogFragment extends DialogFragment {
 
                 } else {
                     rootLayout.removeView(loadingContainer);
-                    showMessagePopup("Form not found.");
+                    showMessagePopup("Form not found or bad API key.");
                     dismiss();
                 }
             }

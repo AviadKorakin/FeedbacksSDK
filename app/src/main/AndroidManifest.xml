@@ -20,7 +20,7 @@
 
         <meta-data
             android:name="com.feedbackslibary.API_KEY"
-            android:value="0194985f-eb0d-7362-9dd0-1713ba1c5049" />
+            android:value="0194988d-a781-7149-b04b-a38a1f981c0a" />
 
         <activity
             android:name=".MainActivity"
