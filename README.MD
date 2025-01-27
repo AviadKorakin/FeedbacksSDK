@@ -1,4 +1,4 @@
-To integrate the **"How to Use"** section with the dependency resolution and implementation details for your library (`FeedbacksSDK`), here’s how you can structure it:
+To integrate the **"How to Use"** section with a mention of the license, you can add a subsection titled **License** at the end of the README file. Here's the updated version:
 
 ---
 
@@ -68,7 +68,7 @@ You can easily create forms on **[our website](https://formgeneratorapi.onrender
     }
   ]
 }
-``` 
+```
 
 Now your users can directly use the website link to design their forms!
 
@@ -92,4 +92,10 @@ Replace `"your_form_id"` in the code above with the form ID generated from the F
 
 ---
 
-This structured approach ensures developers can quickly set up and integrate your library into their projects. Let me know if you’d like further refinements! 😊
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+
+---
+
+This structure makes it clear where developers can find the licensing information. Let me know if you need additional customization!
