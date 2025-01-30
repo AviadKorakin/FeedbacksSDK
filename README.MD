@@ -95,7 +95,3 @@ Replace `"your_form_id"` in the code above with the form ID generated from the F
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
----
-
-This structure makes it clear where developers can find the licensing information. Let me know if you need additional customization!
